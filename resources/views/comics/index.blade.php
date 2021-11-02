@@ -20,9 +20,9 @@
               @foreach ($comics as $comic)
               <tr>
                 <th scope="row">{{$comic["id"]}}</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>{{$comic["title"]}}</td>
+                <td>{{$comic["description"]}}</td>
+                <td>{{$comic["type"]}}</td>
               </tr>
               @endforeach
 
