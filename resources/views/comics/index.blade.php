@@ -27,7 +27,14 @@
                 {{-- Provare senza ID --}}
                 <td><a href="{{ route("comics.show", $comic["id"]) }}" class="btn btn-info">Details</a></td>
                 <td><a href="{{ route("comics.edit", $comic["id"]) }}" class="btn btn-warning">Modify</a></td>
-                <td><a href="" class="btn btn-danger">Delete</a></td>
+                <td>
+                  <form action="{{ route("comics.destroy", $comic["id"]) }}" method="post">
+                    @csrf
+                    @method("DELETE")
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    {{-- <a href="{{ route("comics.destroy", $comic["id"]) }}" class="btn btn-danger" type="submit">Delete</a> --}}
+                  </form>
+                </td>
               </tr>
               @endforeach
 
