@@ -4,7 +4,10 @@
 <div class="container">
    <div class="row">
       <div class="col-12">
-         <form>
+         <form action="{{ route("comics.store") }}" method="post">
+            @csrf
+            @method("POST")
+
             <div class="mt-3 mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" name="title" class="form-control" id="title" placeholder="Enter name of comic">
@@ -28,6 +31,10 @@
              <div class="mb-3">
                <label for="type" class="form-label">Type</label>
                <input type="text" name="type" class="form-control" id="type" placeholder="Enter type">
+             </div>
+             <div class="mb-3">
+               <label for="sale_date" class="form-label">Sale Date</label>
+               <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="Enter Sale Date">
              </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
