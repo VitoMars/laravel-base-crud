@@ -24,7 +24,8 @@
                 <td>{{$comic["title"]}}</td>
                 <td>{{$comic["description"]}}</td>
                 <td>{{$comic["type"]}}</td>
-                <td><a href="{{route("comics.show", $comic())}}" class="btn btn-info">Details</a></td>
+                {{-- Provare senza ID --}}
+                <td><a href="{{route("comics.show", $comic["id"])}}" class="btn btn-info">Details</a></td>
                 <td><a href="" class="btn btn-warning">Modify</a></td>
                 <td><a href="" class="btn btn-danger">Delete</a></td>
               </tr>
