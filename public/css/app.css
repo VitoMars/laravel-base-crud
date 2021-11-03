@@ -12173,3 +12173,21 @@ fieldset:disabled .btn {
   }
 }
 
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  padding: 0;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+
+h1,
+.h1 {
+  margin: 10px 0px;
+}
+
